@@ -1,5 +1,5 @@
 export interface FormData
 {
-    name :String,
-    email:String
+    name :string,
+    email:string
 }

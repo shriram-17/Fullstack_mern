@@ -1,7 +1,8 @@
 import { PrismaClient } from '@prisma/client';
 import express,{Express,NextFunction,Request,Response} from 'express';
 import { UserRoute } from './routes/user';
-import { appendFile } from 'fs';
+import bodyParser from 'body-parser';
+
 
 
 const port : number = 3000
@@ -11,6 +12,10 @@ let app : Express = express()
 //MIDDLEWARE
 
 app.use('/user',UserRoute)
+
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(bodyParser.json());
 
 app.use((req :Request, res:Response, next:NextFunction) => {
     res.header('Access-Control-Allow-Origin', '*');

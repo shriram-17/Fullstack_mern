@@ -13,6 +13,8 @@ let UserForm = () => {
         email,
       });
       console.log(response.data);
+      setname("");
+      setemail("");
     } catch (error) {
       console.log(error);
     }
@@ -29,6 +31,7 @@ let UserForm = () => {
             onChange={(e) => setname(e.target.value)}
           />
         </label>
+
         <label>
           Email:
           <input
@@ -37,7 +40,9 @@ let UserForm = () => {
             onChange={(e) => setemail(e.target.value)}
           />
         </label>
+        
         <button type="submit">Submit</button>
+
       </form>
     </>
   );
