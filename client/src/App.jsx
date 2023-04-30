@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Userpage from './userpage'
 import UserForm from './Userform'
+import Userfetch from './fetchuser'
 
 
 
@@ -14,6 +15,7 @@ function App() {
     <>
       <Userpage route="user"/>
       <UserForm/>
+      <Userfetch/>
     </>
   )
 }
